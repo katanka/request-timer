@@ -3,9 +3,6 @@ import time
 from tqdm import tqdm
 import sys
 
-N = 20
-URL = 'http://localhost:8080/3035/threads'
-
 times = []
 
 def mean(input):
@@ -18,7 +15,7 @@ print "Timing requests to " + sys.argv[1]
 
 for x in tqdm(xrange(1,int(sys.argv[2])+1)):
 	start = time.time()
-	r = requests.get(URL)
+	r = requests.get(sys.argv[1])
 	r.content  # wait until full content has been transfered
 	roundtrip = time.time() - start
 	times.append(roundtrip)
