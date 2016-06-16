@@ -1,2 +1,3 @@
 # request-timer
-Times network requests
+
+Usage: python timer.py [URL] [sample size]
